@@ -1,15 +1,16 @@
 {
-  "name": "p5.js-3d-terraingen",
+  "name": "p5.js-coop-3d-terrainedit",
   "version": "1.0.0",
-  "description": "Infinite 3D Terrain Generator with p5.js",
+  "description": "Online collaborative 3D terrain editor with p5.js",
   "main": "server.js",
   "scripts": {
+    "dev": "nodemon ./server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/JoPedro/p5.js-3D-terraingen.git"
+    "url": "git+https://github.com/JoPedro/p5.js-coop-3d-terrainedit"
   },
   "keywords": [
     "p5.js",
@@ -20,10 +21,11 @@
   "author": "João Pedro",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/JoPedro/p5.js-3D-terraingen/issues"
+    "url": "https://github.com/JoPedro/p5.js-coop-3d-terrainedit/issues"
   },
-  "homepage": "https://github.com/JoPedro/p5.js-3D-terraingen#readme",
+  "homepage": "https://github.com/JoPedro/p5.js-coop-3d-terrainedit#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "nodemon": "^2.0.4"
   }
 }
