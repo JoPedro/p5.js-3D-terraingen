@@ -2,11 +2,11 @@
   "name": "p5.js-coop-3d-terrainedit",
   "version": "1.0.0",
   "description": "Online collaborative 3D terrain editor with p5.js",
-  "main": "server.js",
+  "main": "app.js",
   "scripts": {
-    "dev": "nodemon ./server.js",
+    "dev": "nodemon ./app.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
