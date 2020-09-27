@@ -1,3 +1,4 @@
+// 3D editable terrain class
 class Terrain {
     constructor(w, h, scl) {
         this.scl = scl;
@@ -6,6 +7,7 @@ class Terrain {
         this.zTable = makeArray(this.cols, this.rows, 0);
     }
 
+    // Make the triangle mesh-like structure
     show() {
         for (let y = 0; y < this.rows; y++) {
             beginShape(TRIANGLE_STRIP);
@@ -17,6 +19,7 @@ class Terrain {
         }
     }
 
+    // Click and drag to grow mounts
     grow() {
         for (let y = 0; y < this.rows; y++) {
             for (let x = 0; x < this.cols; x++) {
@@ -28,6 +31,7 @@ class Terrain {
     }
 }
 
+// Two-dimensional array constructor
 function makeArray(w, h, val) {
     var arr = [];
     for(let i = 0; i < h; i++) {

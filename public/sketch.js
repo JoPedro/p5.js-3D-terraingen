@@ -8,10 +8,11 @@ function setup() {
 function draw() {
     background(225);
 
+    // Translate to better angle
     translate(width / 2, height / 2);
-    rotateX(PI/3);
-    
+    rotateX(PI/3); 
     translate(-width, -height);
+    
     terrain.show();
 }
 
