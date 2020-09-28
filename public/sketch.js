@@ -1,21 +1,21 @@
-let terrain;
+let cursor = new Cursor();
 
 function setup() {
     createCanvas(600, 600, WEBGL);
-    terrain = new Terrain(600, 600, 20);
+    createEasyCam();
+    document.oncontextmenu = ()=>false;
+
+    noStroke();
+    ambientMaterial(250);
 }
 
 function draw() {
     background(225);
 
-    // Translate to better angle
-    translate(width / 2, height / 2);
-    rotateX(PI/3); 
-    translate(-width, -height);
-    
-    terrain.show();
-}
+    // Lights
+    pointLight(255, 255, 255, 0, 0, 400);
+    ambientLight(244, 122, 158);
 
-function mouseDragged() {
-    terrain.grow();
+    // Cursor
+    cursor.show();
 }

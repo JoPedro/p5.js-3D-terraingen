@@ -1,3 +1,69 @@
+// XYZ axis color-coded arrows
+class Cursor {
+    show() {
+        const x = mouseX - width / 2;
+        const y = mouseY - height / 2;
+
+        push();
+        noFill();
+        plane(width, height);
+        pop();
+
+        // X axis arrow shaft
+        push();
+        fill(255, 0, 0);
+        translate(x - 10, y, 0);       
+        angleMode(RADIANS);
+        rotateZ(PI / 2);
+        cylinder(1, 20);
+        pop();
+
+        // X axis arrow head
+        push();
+        fill(255, 0, 0);
+        translate(x - 20, y, 0);       
+        angleMode(RADIANS);
+        rotateZ(PI / 2);
+        cone(2, 5);
+        pop();
+
+        // Y Axis arrow shaft
+        push();
+        fill(0, 255, 0);
+        translate(x, y - 10, 0);
+        cylinder(1, 20);
+        pop();
+
+        // Y Axis arrow head
+        push();
+        fill(0, 255, 0);
+        translate(x, y - 20, 0);
+        angleMode(RADIANS);
+        rotateX(PI);
+        cone(2, 5);
+        pop();
+
+        // Z axis arrow shaft
+        push();
+        fill(0, 0, 255);
+        translate(x, y, -10);       
+        angleMode(RADIANS);
+        rotateX(PI / 2);
+        cylinder(1, 20);
+        pop();
+
+        // Z axis arrow head
+        push();
+        fill(0, 0, 255);
+        translate(x, y, -20);       
+        angleMode(RADIANS);
+        rotateY(PI);
+        rotateX(PI / 2);
+        cone(2, 5);
+        pop();       
+    }
+}
+
 // 3D editable terrain class
 class Terrain {
     constructor(w, h, scl) {
@@ -19,7 +85,7 @@ class Terrain {
         }
     }
 
-    // Click and drag to grow mounts
+    // Click and drag to grow mounts (update after 3D picking implementation)
     grow() {
         for (let y = 0; y < this.rows; y++) {
             for (let x = 0; x < this.cols; x++) {
